@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FMDB.h"
+#import <FMDB.h>
 
 @interface SCDBManager : NSObject
 
@@ -21,6 +21,7 @@
 - (NSArray*)getAllObjectsFromTable:(NSString*)table KeyArr:(NSArray*)keyArr;//获取一个表的所有内容
 + (id)stringToObject:(NSString*)string;
 
+//无唯一标识
 - (void)myDeleteFromTable:(NSString*)tableName TargetKeys:(NSArray*)targetKey TargetValues:(NSArray *)targetValue;
 - (void)myCreateTableWithName:(NSString *)tableName keyArr:(NSArray *)keyArr;
 - (id)myGetValueInTable:(NSString*)tableName WhereItsKey:(NSArray*)locateKey IsValue:(NSArray *)locateValue TargetKey:(NSString*)targetKey;
